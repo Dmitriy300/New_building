@@ -1,9 +1,10 @@
 using System;
 using UnityEngine;
 
+
 public class Task : MonoBehaviour
 {
-    
+
     private void Start()
     {
         TypesVariables();
@@ -18,9 +19,10 @@ public class Task : MonoBehaviour
 
         Debug.LogWarning($"Целое число {IntegerVariable}");
         Debug.LogError($"Число с плавающей точкой {FloatingPointVariable}");
-        Debug.LogWarning($"Логическая переменная{LogicalVariable}");
+        Debug.LogWarning($"Логическая переменная {LogicalVariable}");
     }
-    
+
+   
     private void Update()
     {
         
