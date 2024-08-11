@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Task : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    private void Start()
+    {
+        TypesVariables();
+       
+    }
+
+    public void TypesVariables()
+    {
+        int IntegerVariable = 1;
+        float FloatingPointVariable = 6.34984898995003100958845893034675873722685858f;
+        bool LogicalVariable = false;
+
+        Debug.LogError(IntegerVariable);
+        Debug.LogError(FloatingPointVariable);
+        Debug.LogError(LogicalVariable);
+    }
+    
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnValidate()
     {
+        
         
     }
 }
