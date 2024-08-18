@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public int Health;
     public bool IsDeath;
-
+    
     private void Update()
     {
         IsDeath = Health <= 0 ? true : false;
