@@ -6,13 +6,13 @@ using UnityEngine;
 public class CharacterSp : MonoBehaviour
 {
     public Character Character;
+    public Transform Point;
     
-    //private int[] _ally = new int[5];
-    //private int[] _enemy = new int[5];
+    
 
     private void Start()
     {
-        //Instantiate(Character, Point.position, Quaternion.identity);
+        Instantiate(Character, Point.position, Quaternion.identity);
 
         for (int i = 0; i < 5; i++)
         {

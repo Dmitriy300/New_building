@@ -6,6 +6,9 @@ public class Character : MonoBehaviour
 {
     public int Health;
     public bool IsDeath;
+    public bool isAlly;
+    public bool isEnemy;
+
     
     private void Update()
     {
@@ -24,9 +27,6 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (IsDeath)
-            return;
-
         Health -= damage;
         if (Health < 0)
         {
@@ -35,7 +35,28 @@ public class Character : MonoBehaviour
         Debug.LogError(" is dead.");
         
     }
+    
+    private Renderer characterRenderer;
 
-   
+    private void Start()
+    {
+        characterRenderer = GetComponent<Renderer>();
+        UpdateColor();
+
+
+    }
+
+    public void UpdateColor()
+    {
+        // Меняем цвет в зависимости от команды персонажа
+        if (isAlly)
+        {
+            characterRenderer.material.color = Color.red;
+        }
+        else if (isEnemy)
+        {
+            characterRenderer.material.color = Color.blue;
+        }
+    }
 }
 
